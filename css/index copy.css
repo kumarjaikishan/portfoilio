@@ -91,11 +91,10 @@ body {
             width: 50%;
             display: grid;
             place-items: center;
-            /* border: 1px solid yellow; */
 
             img {
                 border-radius: 10px;
-                 /* box-shadow: 7px 10px 30px var(--maincolor); */
+                margin-left: 13%;
             }
         }
 
@@ -138,15 +137,14 @@ body {
         }
 
         .right {
-            /* border: 2px solid yellow; */
             width: 50%;
             display: grid;
             place-items: center;
 
             img {
                 border-radius: 10px;
-                /* margin-left: 10px; */
-                /* box-shadow: 7px 10px 30px rgb(7, 123, 136); */
+                margin-right: 13%;
+                /* box-shadow: 2px 2px 30px rgb(7, 123, 136); */
             }
         }
 
@@ -477,7 +475,6 @@ body {
 
             .right {
                 width: 100%;
-            justify-content: center;
 
                 img {
                     border: none;
