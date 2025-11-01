@@ -95,7 +95,7 @@ body {
 
             img {
                 border-radius: 10px;
-                 /* box-shadow: 7px 10px 30px var(--maincolor); */
+                /* box-shadow: 7px 10px 30px var(--maincolor); */
             }
         }
 
@@ -243,6 +243,35 @@ body {
         height: 100%;
         object-fit: contain;
     }
+}
+
+.demo {
+    margin-top: 10px;
+
+    p {
+        margin: 0;
+        font-size: 12px;
+    }
+
+    i {
+        color: white !important;
+        /* blue */
+        font-size: 16px;
+        margin-left: 5px;
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover {
+            scale: 1.06 !important;
+            color: var(--maincolor) !important;
+        }
+    }
+
+}
+h2 i{
+    font-size: 24px !important;
+    margin-left: 10px;
+    cursor: pointer;
 }
 
 /* Modal overlay */
@@ -477,7 +506,7 @@ body {
 
             .right {
                 width: 100%;
-            justify-content: center;
+                justify-content: center;
 
                 img {
                     border: none;

@@ -281,7 +281,11 @@
 					<span class="bor"></span>
 					<div class="left">
 						<div class="wrap">
-							<h2>Battlefiesta</h2>
+							<h2>Battlefiesta
+								<a href="https://battlefiesta.in" target="_blank">
+									<i class="fa fa-external-link" aria-hidden="true"></i>
+								</a>
+							</h2>
 							<i>Esport Tournaments Manager</i><br>
 							<p>
 								An Esports Tournament Manager platform to create, host, and manage tournaments for games
@@ -294,6 +298,12 @@
 									class="tech">Redux Toolkit</span>
 								<span class="tech">Cloudinary</span><span class="tech">MongoDB</span><span
 									class="tech">Node.js</span><span class="tech">Firebase</span>
+							</div>
+							<div class="demo">
+								<p>demo Id :- demo@gmail.com <i onclick="copyToClipboard('demo@gmail.com')"
+										class="fa fa-clone" aria-hidden="true"></i></p>
+								<p>passowrd :- demo <i onclick="copyToClipboard('demo')" class="fa fa-clone"
+										aria-hidden="true"></i></p>
 							</div>
 						</div>
 					</div>
@@ -315,7 +325,10 @@
 					</div>
 					<div class="left">
 						<div class="wrap">
-							<h2>Accusoft</h2>
+							<h2>Accusoft
+								<a href="https://accusoft.battlefiesta.in" target="_blank">
+									<i class="fa fa-external-link" aria-hidden="true"></i></a>
+							</h2>
 							<i>Expense Management App</i><br>
 							<p>
 								A full-featured Expense Management System built using the MERN stack that allows users
@@ -331,6 +344,12 @@
 								<span class="tech">Cloudinary</span><span class="tech">MongoDB</span><span
 									class="tech">Node.js</span><span class="tech">Firebase</span>
 							</div>
+							<div class="demo">
+								<p>demo Id :- demo@gmail.com <i onclick="copyToClipboard('demo@gmail.com')"
+										class="fa fa-clone" aria-hidden="true"></i></p>
+								<p>passowrd :- demo <i onclick="copyToClipboard('demo')" class="fa fa-clone"
+										aria-hidden="true"></i></p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -339,7 +358,11 @@
 					<span class="bor"></span>
 					<div class="left">
 						<div class="wrap">
-							<h2>EMS</h2>
+							<h2>EMS
+								<a href="https://office.battlefiesta.in" target="_blank">
+									<i class="fa fa-external-link" aria-hidden="true"></i>
+								</a>
+							</h2>
 							<i>Employee Management System</i><br>
 							<p>MERN stack app to record, monitor, and manage employee attendance, providing real-time
 								reports for HR and management.</p>
@@ -604,7 +627,7 @@
 
 			console.log("submit clicked", name, email, message);
 
-			
+
 			// Prepare data to send
 			const formData = { name, email, message };
 			const body = `Hey Kishan,
@@ -635,7 +658,7 @@
 				emailInput.value = '';
 				messageInput.value = '';
 				modale.style.display = 'none';
-				showToast();
+				showToast(3500, 'Thank you! We will get back to you soon.');
 				return true;
 			} catch (error) {
 				console.error('Error sending message:', error.message);
@@ -647,7 +670,8 @@
 		const toast = document.getElementById('successToast');
 		const closeToastBtn = toast.querySelector('.close-btn');
 
-		function showToast(duration = 3000) {
+		function showToast(duration = 3000, msg) {
+			toast.innerText = msg;
 			toast.classList.add('show');
 
 			// Auto hide after duration
@@ -660,6 +684,17 @@
 		closeToastBtn.addEventListener('click', () => {
 			toast.classList.remove('show');
 		});
+
+		function copyToClipboard(text) {
+			navigator.clipboard.writeText(text)
+				.then(() => {
+					// alert('Copied: ' + text);
+					showToast(1200, 'Copied')
+				})
+				.catch(err => {
+					console.error('Failed to copy: ', err);
+				});
+		}
 
 	</script>
 
