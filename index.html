@@ -686,15 +686,29 @@
 		});
 
 		function copyToClipboard(text) {
-			navigator.clipboard.writeText(text)
-				.then(() => {
-					// alert('Copied: ' + text);
-					showToast(1200, 'Copied')
-				})
-				.catch(err => {
-					console.error('Failed to copy: ', err);
-				});
+			if (navigator.clipboard && window.isSecureContext) {
+				navigator.clipboard.writeText(text)
+					.then(() => showToast(1200, 'Copied'))
+					.catch(err => console.error('Clipboard write failed:', err));
+			} else {
+				// Fallback method for HTTP or older browsers
+				const textarea = document.createElement('textarea');
+				textarea.value = text;
+				textarea.style.position = 'fixed';
+				textarea.style.left = '-9999px';
+				document.body.appendChild(textarea);
+				textarea.focus();
+				textarea.select();
+				try {
+					document.execCommand('copy');
+					showToast(1200, 'Copied');
+				} catch (err) {
+					console.error('Fallback copy failed:', err);
+				}
+				document.body.removeChild(textarea);
+			}
 		}
+
 
 	</script>
 
