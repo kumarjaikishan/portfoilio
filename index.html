@@ -572,7 +572,8 @@
 
 	<script src="js/main.js"></script>
 
-	<script>
+	<script type="module">
+		import { SignJWT } from "https://cdn.jsdelivr.net/npm/jose@5.1.3/+esm";
 		const modale = document.getElementById('myModale');
 		const openBtn = document.getElementById('openModale');
 		const submitBtn = document.getElementById('submit');
@@ -581,6 +582,16 @@
 		const nameInput = modale.querySelector('input[type="text"]');
 		const emailInput = modale.querySelector('input[type="email"]');
 		const messageInput = modale.querySelector('textarea');
+
+		async function generateInternalServiceToken() {
+			const secret = new TextEncoder().encode("merndeveloperjaikishankumar"); // 🔴 visible in client!
+			const token = await new SignJWT({ service: "main-backend", role: "internal" })
+				.setProtectedHeader({ alg: "HS256" })
+				.setExpirationTime("2m")
+				.sign(secret);
+
+			return token;
+		}
 
 		openBtn.addEventListener('click', () => {
 			modale.classList.add('show');
@@ -604,34 +615,46 @@
 
 			console.log("submit clicked", name, email, message);
 
+			const token = await generateInternalServiceToken();
+			console.log("Generated Token:", token);
+
 			// Prepare data to send
 			const formData = { name, email, message };
+			const body = `Hey Kishan,
+
+                 You received a new message from your portfolio contact form.
+                 
+                 Name: ${name}
+                 Email: ${email}
+                 Message: ${message}
+                 `;
 
 			try {
-				const response = await fetch('https://your-server-endpoint.com/contact', {
+				const response = await fetch('https://battlefiesta.in/api/sendmail', {
 					method: 'POST',
 					headers: {
-						'Content-Type': 'application/json'
+						'Content-Type': 'application/json',
+						'Authorization': `Bearer ${token}`
 					},
-					body: JSON.stringify(formData)
+					body: JSON.stringify({ email: 'kumar.jaikishan4880@gmail.com', title: 'Portfolio contact', body })
 				});
 
 				if (!response.ok) {
 					throw new Error(`HTTP error! status: ${response.status}`);
 				}
 
-				const result = await response.json();
-				console.log('Success:', result);
-
-				// Optionally clear the form and close modal
+				const data = await response.json();
+				console.log('Response from fetch request:', data);
 				nameInput.value = '';
 				emailInput.value = '';
 				messageInput.value = '';
 				modale.style.display = 'none';
-				showToast()
+				showToast();
+				return true;
 			} catch (error) {
-				console.error('Error sending message:', error);
+				console.error('Error sending message:', error.message);
 				alert('Failed to send message. Please try again.');
+				return false;
 			}
 		});
 
