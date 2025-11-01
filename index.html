@@ -572,8 +572,7 @@
 
 	<script src="js/main.js"></script>
 
-	<script type="module">
-		import { SignJWT } from "https://cdn.jsdelivr.net/npm/jose@5.1.3/+esm";
+	<script>
 		const modale = document.getElementById('myModale');
 		const openBtn = document.getElementById('openModale');
 		const submitBtn = document.getElementById('submit');
@@ -582,16 +581,6 @@
 		const nameInput = modale.querySelector('input[type="text"]');
 		const emailInput = modale.querySelector('input[type="email"]');
 		const messageInput = modale.querySelector('textarea');
-
-		async function generateInternalServiceToken() {
-			const secret = new TextEncoder().encode("merndeveloperjaikishankumar"); // 🔴 visible in client!
-			const token = await new SignJWT({ service: "main-backend", role: "internal" })
-				.setProtectedHeader({ alg: "HS256" })
-				.setExpirationTime("2m")
-				.sign(secret);
-
-			return token;
-		}
 
 		openBtn.addEventListener('click', () => {
 			modale.classList.add('show');
@@ -615,9 +604,7 @@
 
 			console.log("submit clicked", name, email, message);
 
-			const token = await generateInternalServiceToken();
-			console.log("Generated Token:", token);
-
+			
 			// Prepare data to send
 			const formData = { name, email, message };
 			const body = `Hey Kishan,
@@ -634,7 +621,6 @@
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
-						'Authorization': `Bearer ${token}`
 					},
 					body: JSON.stringify({ email: 'kumar.jaikishan4880@gmail.com', title: 'Portfolio contact', body })
 				});
