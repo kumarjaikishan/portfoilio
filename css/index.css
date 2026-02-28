@@ -449,9 +449,11 @@ h2 i{
 
 
 
-
-
 @media only screen and (max-width: 600px) {
+
+    .heading-section h1.big{
+        font-size: 17vw;
+    }
     .about-img {
         margin: 0 auto;
         width: 150px;
@@ -462,8 +464,7 @@ h2 i{
         /* border: 3px solid red; */
 
         .section {
-            padding: 10px 0px;
-            /* border: 1px solid yellow; */
+            padding: 10px 4px;
             margin: 10px 0px;
             /* height: 300px; */
 
@@ -494,8 +495,7 @@ h2 i{
 
                 img {
                     transition: 0.2s;
-                    width: 400px;
-                    /* border: 1px solid red; */
+                    width: 100%;
 
                     &:hover {
                         transform: scale(1.01);
