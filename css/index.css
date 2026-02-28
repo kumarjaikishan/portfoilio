@@ -8,10 +8,11 @@ body {
     overflow-x: hidden;
 }
 
-#home-section{
-   position: relative;
-   
+#home-section {
+    position: relative;
+
 }
+
 .banner {
     position: absolute;
     top: 0;
@@ -34,10 +35,11 @@ body {
     position: relative;
     z-index: 2;
     pointer-events: none;
-   /* backdrop-filter: blur(2px); */
-   background: rgba(0, 0, 0, 0.4);
+    /* backdrop-filter: blur(2px); */
+    background: rgba(0, 0, 0, 0.4);
 }
-.home-slider a{
+
+.home-slider a {
     pointer-events: all;
 }
 
@@ -302,7 +304,8 @@ body {
     }
 
 }
-h2 i{
+
+h2 i {
     font-size: 24px !important;
     margin-left: 10px;
     cursor: pointer;
@@ -414,7 +417,7 @@ h2 i{
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     font-family: sans-serif;
     font-size: 14px;
-    display: none; 
+    display: none;
     opacity: 0;
     transition: opacity 0.4s ease, transform 0.4s ease;
 
@@ -451,9 +454,10 @@ h2 i{
 
 @media only screen and (max-width: 600px) {
 
-    .heading-section h1.big{
+    .heading-section h1.big {
         font-size: 17vw;
     }
+
     .about-img {
         margin: 0 auto;
         width: 150px;
@@ -517,11 +521,11 @@ h2 i{
 
             .left {
                 width: 100%;
+                padding: 5px;
             }
 
             .right {
                 width: 100%;
-
 
                 img {
                     border: none;
@@ -536,6 +540,7 @@ h2 i{
 
             .left {
                 width: 100%;
+                padding: 5px;
             }
 
             .right {
