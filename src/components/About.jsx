@@ -31,7 +31,7 @@ export default function About() {
             <div className="w-36 h-36 sm:w-40 sm:h-40 rounded-full bg-gold-gradient p-1 overflow-hidden flex-shrink-0 shadow-lg shadow-gold/20">
               <img
                 src="https://res.cloudinary.com/dusxlxlvm/image/upload/v1761292180/personal/Pi7_Passport_Photo-Picsart-AiImageEnhancer_mst1bl.webp"
-                alt="Profile"
+                alt="Jai Kishan Kumar - MERN Developer Profile Photo"
                 className="w-full h-full object-cover rounded-full"
               />
             </div>

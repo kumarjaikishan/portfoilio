@@ -39,8 +39,8 @@ export default function Navbar({ theme, onToggleTheme }) {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-bg/85 backdrop-blur-md border-b border-border-c/10 py-3' : 'bg-transparent py-5'
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b ${
+        scrolled ? 'bg-bg/85 backdrop-blur-md border-border-c/10 py-3' : 'bg-transparent border-transparent py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between gap-4">

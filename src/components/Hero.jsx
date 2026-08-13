@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       id="home-section"
-      className="relative min-h-screen flex items-center overflow-hidden bg-transparent pt-28 pb-16"
+      className="relative min-h-screen flex items-center overflow-hidden bg-transparent pt-8 pb-16"
     >
       <div className="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center pointer-events-none">
         <div className="reveal pointer-events-auto">
@@ -59,10 +59,32 @@ export default function Hero() {
         <div className="flex justify-center md:justify-end pointer-events-auto relative">
           <img
             src="https://res.cloudinary.com/dusxlxlvm/image/upload/v1761291228/personal/Generated_Image_October_15_2025_-_9_12PM-Picsart-AiImageEnhancer_1_1_txq0c6.webp"
-            alt="Jai Kishan Kumar"
-            className="max-h-[640px] lg:max-h-[750px] w-auto object-contain drop-shadow-2xl scale-105"
+            alt="Jai Kishan Kumar - Full Stack MERN Developer"
+            className="max-h-[640px] lg:max-h-[650px] w-auto object-contain drop-shadow-2xl scale-105"
           />
         </div>
+      </div>
+
+      {/* Vertical Social Links on Right Side */}
+      <div className="pointer-events-auto absolute right-4 sm:right-8 lg:right-12 bottom-16 sm:bottom-18 z-20 flex flex-col gap-3 sm:gap-4 items-center">
+        <a
+          href="https://www.linkedin.com/in/dev-kishan/"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="LinkedIn"
+          className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-surface/80 border border-border-c/15 backdrop-blur-md flex items-center justify-center text-text/80 hover:text-gold hover:border-gold hover:bg-surface hover:scale-110 transition-all duration-300 shadow-md"
+        >
+          <i className="fa fa-linkedin text-base sm:text-lg" aria-hidden="true"></i>
+        </a>
+        <a
+          href="https://github.com/kumarjaikishan"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="GitHub"
+          className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-surface/80 border border-border-c/15 backdrop-blur-md flex items-center justify-center text-text/80 hover:text-gold hover:border-gold hover:bg-surface hover:scale-110 transition-all duration-300 shadow-md"
+        >
+          <i className="fa fa-github text-base sm:text-lg" aria-hidden="true"></i>
+        </a>
       </div>
 
       <a
