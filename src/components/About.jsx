@@ -27,7 +27,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-start">
         {/* Left: photo + skills */}
         <div className="reveal lg:col-span-5">
-          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-10">
+          <div className="w-full flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-10">
             <div className="w-36 h-36 sm:w-40 sm:h-40 rounded-full bg-gold-gradient p-1 overflow-hidden flex-shrink-0 shadow-lg shadow-gold/20">
               <img
                 src="https://res.cloudinary.com/dusxlxlvm/image/upload/v1761292180/personal/Pi7_Passport_Photo-Picsart-AiImageEnhancer_mst1bl.webp"
@@ -35,11 +35,23 @@ export default function About() {
                 className="w-full h-full object-cover rounded-full"
               />
             </div>
-            <div className="text-sm sm:text-base text-text/80 space-y-2 pt-2">
-              <p><span className="font-semibold text-text">Name: </span><span className="text-text/70">Jai Kishan Kumar</span></p>
-              <p><span className="font-semibold text-text">Job Role: </span><span className="text-text/70">MERN Developer</span></p>
-              <p><span className="font-semibold text-text">Experience: </span><span className="text-text/70">Fresher (Project Experience)</span></p>
-              <p><span className="font-semibold text-text">Address: </span><span className="text-text/70">Bihar, India</span></p>
+            <div className="w-full text-sm sm:text-base text-text/80 space-y-2 pt-2">
+              <div className="flex items-start">
+                <span className="font-semibold text-text w-28 shrink-0 flex justify-between pr-2">Name <span>:</span></span>
+                <span className="text-text/70">Jai Kishan Kumar</span>
+              </div>
+              <div className="flex items-start">
+                <span className="font-semibold text-text w-28 shrink-0 flex justify-between pr-2">Job Role <span>:</span></span>
+                <span className="text-text/70">MERN Developer</span>
+              </div>
+              <div className="flex items-start">
+                <span className="font-semibold text-text w-28 shrink-0 flex justify-between pr-2">Experience <span>:</span></span>
+                <span className="text-text/70 leading-normal">Fresher (Project Experience)</span>
+              </div>
+              <div className="flex items-start">
+                <span className="font-semibold text-text w-28 shrink-0 flex justify-between pr-2">Address <span>:</span></span>
+                <span className="text-text/70">Bihar, India</span>
+              </div>
             </div>
           </div>
 
@@ -73,12 +85,13 @@ export default function About() {
             solutions.
           </p>
 
-          <div className="space-y-3.5 text-sm sm:text-base">
+          <div className="space-y-3.5 text-sm sm:text-base w-full">
             {infoRows.map(([label, value]) => (
-              <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-2" key={label}>
-                <span className="font-bold text-text sm:w-44 shrink-0">{label}</span>
-                <span className="hidden sm:inline text-text/80 font-medium shrink-0">:</span>
-                <span className="text-text/70 leading-normal break-words">{value}</span>
+              <div className="flex items-start gap-2 w-full" key={label}>
+                <span className="font-bold text-text w-32 sm:w-44 shrink-0 flex justify-between pr-1">
+                  {label} <span>:</span>
+                </span>
+                <span className="text-text/70 leading-normal break-words flex-1">{value}</span>
               </div>
             ))}
           </div>
