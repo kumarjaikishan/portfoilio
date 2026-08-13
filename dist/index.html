@@ -5,6 +5,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="icon" sizes="32x32" href="/assets/images/favicon.ico" />
+  <meta name="theme-color" content="#08080a" />
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('portfolio-theme');
+        var theme = stored === 'light' || stored === 'dark'
+          ? stored
+          : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.classList.add(theme);
+      } catch (e) {}
+    })();
+  </script>
 
   <title>Jai Kishan | Full Stack MERN Developer Portfolio</title>
   <meta name="description"
@@ -18,8 +31,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
     integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script type="module" crossorigin src="/assets/index-BtrlszGC.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-DcapCoR-.css">
+  <script type="module" crossorigin src="/assets/index-VqK6aoFa.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-QDnDns0H.css">
 </head>
 
 <body>
