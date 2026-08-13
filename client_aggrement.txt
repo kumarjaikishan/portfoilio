@@ -1,0 +1,260 @@
+# SOFTWARE DEVELOPMENT AND MAINTENANCE AGREEMENT
+
+**This Agreement** is made on ___ / ___ / 20___.
+
+## 1. Parties
+
+**Client**
+
+Name: ___________________________
+
+Address: _________________________
+
+Phone/Email: _____________________
+
+AND
+
+**Developer**
+
+Name: ___________________________
+
+Address: _________________________
+
+Phone/Email: _____________________
+
+Collectively referred to as "the Parties."
+
+---
+
+# 2. Purpose
+
+The Developer has developed and agrees to maintain a custom web-based software application for the Client.
+
+The software consists of the following integrated modules:
+
+1. MLM Product Sales & Commission Management
+2. Land/Plot Sales with Down Payment & EMI Management
+3. Investment Management with Daily/Monthly Accrual System
+4. Referral & Commission Distribution
+5. Admin Dashboard
+6. Customer Dashboard
+7. Reports and Analytics
+8. User & Role Management
+9. Wallet/Ledger System
+
+---
+
+# 3. Development Charges
+
+The Client agrees to pay the Developer:
+
+**Total Development Cost: ₹60,000/- (Rupees Sixty Thousand Only).**
+
+Payment Details:
+
+Development Fee Paid: ₹_________
+
+Balance Amount: ₹_________
+
+Payment Date(s): __________________
+
+Upon receipt of the full development payment, the development portion of this agreement shall be considered completed.
+
+---
+
+# 4. Monthly Maintenance Charges
+
+The Client agrees to pay:
+
+**₹4,500/- per month**
+
+The maintenance fee shall become payable from:
+
+____ / ____ / 20____
+
+Payment shall be made on or before the _____ day of every month.
+
+---
+
+# 5. Maintenance Includes
+
+The monthly maintenance shall include:
+
+* Bug fixing
+* Minor software corrections
+* Security updates
+* Database optimization (if required)
+* Backup guidance or backup support (as mutually agreed)
+* Technical support during business hours
+* Performance monitoring (if agreed)
+* Compatibility updates where reasonably required
+
+---
+
+# 6. Maintenance Does NOT Include
+
+The following are excluded and will be charged separately:
+
+* New modules
+* New business logic
+* UI redesign
+* Payment gateway additions
+* Mobile application development
+* API integrations
+* SMS/WhatsApp integrations not originally included
+* Third-party software licenses
+* Major report additions
+* Data migration from external systems
+
+Any work outside maintenance shall be estimated and approved by the Client before commencement.
+
+---
+
+# 7. Client Responsibilities
+
+The Client shall provide:
+
+* Server access
+* Domain access
+* Required credentials
+* Business rules
+* Necessary approvals
+* Timely payments
+
+The Client shall bear the cost of:
+
+* Domain registration
+* Hosting/server charges
+* SMS charges
+* Email services
+* Payment gateway charges
+* Third-party software subscriptions
+
+---
+
+# 8. Source Code & Ownership
+
+Upon payment of the agreed development charges:
+
+☐ The Client shall own the software source code.
+
+OR
+
+☐ The Developer shall retain ownership of the source code and grant the Client a perpetual license to use the software.
+
+(The parties should tick only one option.)
+
+The database and business data generated through the software shall belong to the Client.
+
+---
+
+# 9. Confidentiality
+
+The Developer shall keep confidential all information relating to the Client's:
+
+* Customers
+* Financial information
+* Business processes
+* Investment records
+* Commission data
+* User information
+
+Such information shall not be disclosed to any third party without written permission unless required by law.
+
+---
+
+# 10. Response Time
+
+Maintenance requests shall normally be addressed as follows:
+
+Critical Issue: Within 24 hours
+
+Medium Priority Issue: Within 2 business days
+
+Minor Issue: Within 5 business days
+
+Actual resolution time may vary depending on complexity.
+
+---
+
+# 11. Feature Requests
+
+Any feature request beyond the agreed scope shall be treated as a separate project and quoted independently.
+
+No additional work shall commence without the Client's approval.
+
+---
+
+# 12. Termination
+
+Either party may terminate the maintenance agreement by giving **30 days' written notice**.
+
+Termination shall not affect any payments already due.
+
+---
+
+# 13. Limitation of Liability
+
+The Developer shall not be responsible for loss caused by:
+
+* Hosting/server failures
+* Third-party service outages
+* Cyber attacks beyond reasonable control
+* Client misuse
+* Unauthorized modifications by third parties
+
+---
+
+# 14. Dispute Resolution
+
+The Parties shall first attempt to resolve disputes through mutual discussion.
+
+If unresolved, the matter shall be subject to the jurisdiction of the courts located at:
+
+________________________ (City, State)
+
+---
+
+# 15. Entire Agreement
+
+This document constitutes the complete agreement between the Parties and supersedes all prior discussions relating to the software development and maintenance.
+
+Any amendment shall be made only in writing and signed by both Parties.
+
+---
+
+# Signatures
+
+### Client
+
+Name:
+
+Signature:
+
+Date:
+
+---
+
+### Developer
+
+Name:
+
+Signature:
+
+Date:
+
+---
+
+### Witness 1
+
+Name:
+
+Signature:
+
+---
+
+### Witness 2
+
+Name:
+
+Signature:

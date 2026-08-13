@@ -1,0 +1,106 @@
+Create a clean, modern, professional infographic pricing chart for a freelance web developer.
+
+Title:
+"Web Developer Pricing"
+
+Design style:
+- Minimal, corporate, tech-style UI
+- White background with soft gradient
+- Dark blue header bar
+- Rounded corners, subtle shadows
+- Clean sans-serif font
+- Use icons for each section (pages, features, price, etc.)
+- Add small rocket icons near title for visual appeal
+
+Main Table Columns:
+Level | Pages | Includes | Features | Price (₹)
+
+Pricing Rows:
+
+1. Basic
+- Pages: 1–3 Pages
+- Includes: Static Website
+- Features: Responsive UI, Contact Form
+- Price: ₹4,000 – ₹12,000
+
+2. Basic+
+- Pages: 3–5 Pages
+- Includes: Business Website
+- Features: Services, Blog UI, SEO Basic
+- Price: ₹8,000 – ₹20,000
+
+3. Standard
+- Pages: 5–8 Pages
+- Includes: Dynamic Website
+- Features: Login/Register, API, Database
+- Price: ₹15,000 – ₹40,000
+
+4. Standard+
+- Pages: 8–12 Pages
+- Includes: Advanced Dynamic
+- Features: Auth + User System + Dashboard
+- Price: ₹22,000 – ₹60,000
+
+5. Advanced
+- Pages: 10–15 Pages
+- Includes: Full MERN Website
+- Features: Admin Panel, CRUD, Charts
+- Price: ₹40,000 – ₹1,00,000
+
+6. Pro
+- Pages: 15–20 Pages
+- Includes: E-commerce / Large App
+- Features: Orders, Payments, Full Admin
+- Price: ₹65,000 – ₹1,70,000
+
+7. SaaS
+- Pages: 20+ Pages
+- Includes: SaaS Platform
+- Features: Subscription, Multi-user, API Integrations
+- Price: ₹1,20,000 – ₹2,50,000+
+
+Color coding:
+- Green for Basic tiers
+- Orange for Standard tiers
+- Red for Advanced/Pro
+- Purple for SaaS
+
+---
+
+Extras Section (Add-on):
+
+Title: "Extras (Add-on)"
+
+- Domain + Hosting → ₹1,500 – ₹8,000
+- Deployment → ₹1,500 – ₹6,000
+- SEO Setup → ₹3,000 – ₹8,000
+- Maintenance → ₹1,500 – ₹8,000 / month
+
+---
+
+Bottom Section:
+
+Include contact bar with icons:
+
+📞 Contact No: 8210539367  
+📧 Email: kumar.jaikishan0@gmail.com  
+🌐 Portfolio: https://portfolio.battlefiesta.in/
+
+---
+
+Footer icons/text:
+- Secure & Scalable
+- Modern Tech Stack (MERN)
+- Clean Code & Best Practices
+- Support & Maintenance Available
+
+---
+
+Layout:
+- Center aligned
+- Clean grid system
+- Balanced spacing
+- Professional infographic look
+- High resolution (4K)
+
+Make it visually appealing, easy to read, and suitable for freelancing marketing.

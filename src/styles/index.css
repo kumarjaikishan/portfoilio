@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+[data-theme='dark'] {
+  --color-bg: 8 8 10;
+  --color-surface: 20 19 24;
+  --color-surface-2: 26 25 31;
+  --color-surface-3: 38 37 46;
+  --color-text: 255 255 255;
+  --color-border: 255 255 255;
+
+  --canvas-fade: rgba(8, 8, 10, 0.55);
+}
+
+[data-theme='light'] {
+  --color-bg: 250 247 240;
+  --color-surface: 255 255 255;
+  --color-surface-2: 247 242 232;
+  --color-surface-3: 236 229 214;
+  --color-text: 26 20 12;
+  --color-border: 26 20 12;
+
+  --canvas-fade: rgba(250, 247, 240, 0.5);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-bg text-text font-poppins overflow-x-hidden transition-colors duration-500;
+}
+
+::selection {
+  @apply bg-gold/40 text-text;
+}
+
+/* Slim, theme-aware scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-bg;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-surface3 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gold/60;
+}
+
+/* scroll-reveal: elements start hidden, fade/slide up once .in-view is added by useScrollAnimate */
+.reveal {
+  @apply opacity-0;
+}
+
+.reveal.in-view {
+  @apply opacity-100 animate-fade-in-up;
+}
+
+/* progress bar fill transition (skills section) */
+.skill-bar {
+  transition: width 1.2s ease;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* Gradient text for headline accents */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #ffd482 0%, #f5a623 45%, #e2711d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Animated shimmering gradient text */
+.text-shimmer {
+  background: linear-gradient(90deg, #f5a623 0%, #ffe3ab 25%, #f5a623 50%, #8b7cf6 75%, #f5a623 100%);
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 6s linear infinite;
+}
+
+/* Frosted glass card used across the redesigned UI */
+.glass-card {
+  @apply bg-surface/70 border border-border-c/10 backdrop-blur-xl;
+}
+
+/* Primary gradient CTA button */
+.btn-gold {
+  @apply relative inline-flex items-center justify-center gap-2 rounded-full font-bold text-xs uppercase tracking-widest px-8 py-3.5 text-inkfixed shadow-lg shadow-gold/20 transition-all duration-300;
+  background: linear-gradient(135deg, #ffd482 0%, #f5a623 55%, #e2711d 100%);
+}
+.btn-gold:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 10px 30px -8px rgba(245, 166, 35, 0.55);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center gap-2 rounded-full font-bold text-xs uppercase tracking-widest px-8 py-3.5 border border-border-c/30 text-text transition-all duration-300;
+}
+.btn-outline:hover {
+  @apply bg-text text-bg border-text;
+  transform: translateY(-2px);
+}
