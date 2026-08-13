@@ -296,7 +296,7 @@ export default function DotsCanvas({ theme = 'dark' }) {
   }, [])
 
   return (
-    <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none" ref={containerRef}>
+    <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none blur-[1px] md:blur-none" ref={containerRef}>
       <canvas className="block w-full h-full" ref={canvasRef} />
     </div>
   )

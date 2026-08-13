@@ -57,16 +57,16 @@ export default function Contact({ onOpenModal }) {
         />
 
         {/* 4 Column Contact Icons Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 mb-20">
           {contactBoxes.map((box) => (
             <div key={box.title} className="reveal text-center">
-              <div className="w-24 h-24 sm:w-28 sm:h-28 mx-auto rounded-full bg-surface2/90 flex items-center justify-center mb-6 text-gold text-2xl sm:text-3xl border border-border-c/5 shadow-lg">
+              <div className="w-20 h-20 sm:w-28 sm:h-28 mx-auto rounded-full bg-surface2/90 flex items-center justify-center mb-4 sm:mb-6 text-gold text-xl sm:text-3xl border border-border-c/5 shadow-lg">
                 <i className={`fa ${box.icon}`} aria-hidden="true"></i>
               </div>
-              <h4 className="font-bold uppercase tracking-wider text-text text-sm sm:text-base mb-3">
+              <h4 className="font-bold uppercase tracking-wider text-text text-xs sm:text-base mb-2 sm:mb-3">
                 {box.title}
               </h4>
-              <div className="text-text/70 text-sm sm:text-base">{box.body}</div>
+              <div className="text-text/70 text-xs sm:text-base">{box.body}</div>
             </div>
           ))}
         </div>

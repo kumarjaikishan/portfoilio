@@ -4,6 +4,7 @@ import Hero from './components/Hero.jsx'
 import About from './components/About.jsx'
 import Services from './components/Services.jsx'
 import Projects from './components/Projects.jsx'
+import Education from './components/Education.jsx'
 import Resume from './components/Resume.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
@@ -70,6 +71,7 @@ export default function App() {
       <About />
       <Services />
       <Projects onCopy={handleCopy} />
+      {/* <Education /> */}
       <Resume />
       <Contact onOpenModal={() => setModalOpen(true)} />
       <Footer />
