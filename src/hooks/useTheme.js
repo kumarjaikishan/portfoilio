@@ -6,8 +6,8 @@ function getInitialTheme() {
   if (typeof window === 'undefined') return 'dark'
   const stored = window.localStorage.getItem(STORAGE_KEY)
   if (stored === 'dark' || stored === 'light') return stored
-  // Default to dark — the galaxy canvas is designed dark-first
-  return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+  // Default to dark mode
+  return 'dark'
 }
 
 export default function useTheme() {
