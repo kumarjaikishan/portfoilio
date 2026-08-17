@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export default function QuestionModal({ open, onClose, onSent }) {
+export default function QuestionModal({ open, onClose, onSent, onError }) {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
@@ -36,7 +36,9 @@ Message: ${message}
       onSent('Thank you! We will get back to you soon.')
     } catch (err) {
       console.error('Error sending message:', err.message)
-      alert('Failed to send message. Please try again.')
+      if (onError) {
+        onError('Failed to send message. Please try again.')
+      }
     } finally {
       setSending(false)
     }

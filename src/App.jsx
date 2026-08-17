@@ -18,7 +18,7 @@ import useTheme from './hooks/useTheme.js'
 export default function App() {
   const [loaderHidden, setLoaderHidden] = useState(false)
   const [modalOpen, setModalOpen] = useState(false)
-  const [toast, setToast] = useState({ visible: false, message: '' })
+  const [toast, setToast] = useState({ visible: false, message: '', type: 'success' })
   const { theme, toggleTheme } = useTheme()
 
   // hide the loader once everything has mounted, like the original ftco-loader
@@ -34,8 +34,8 @@ export default function App() {
     document.body.classList.toggle('no-scroll', modalOpen)
   }, [modalOpen])
 
-  const showToast = (message, duration = 3500) => {
-    setToast({ visible: true, message })
+  const showToast = (message, type = 'success', duration = 3000) => {
+    setToast({ visible: true, message, type })
     setTimeout(() => setToast((t) => ({ ...t, visible: false })), duration)
   }
 
@@ -43,8 +43,11 @@ export default function App() {
     if (navigator.clipboard && window.isSecureContext) {
       navigator.clipboard
         .writeText(text)
-        .then(() => showToast('Copied', 1200))
-        .catch((err) => console.error('Clipboard write failed:', err))
+        .then(() => showToast(`Copied: "${text}"`, 'info', 2000))
+        .catch((err) => {
+          console.error('Clipboard write failed:', err)
+          showToast('Failed to copy', 'error')
+        })
     } else {
       const textarea = document.createElement('textarea')
       textarea.value = text
@@ -55,9 +58,10 @@ export default function App() {
       textarea.select()
       try {
         document.execCommand('copy')
-        showToast('Copied', 1200)
+        showToast(`Copied: "${text}"`, 'info', 2000)
       } catch (err) {
         console.error('Fallback copy failed:', err)
+        showToast('Failed to copy', 'error')
       }
       document.body.removeChild(textarea)
     }
@@ -79,11 +83,13 @@ export default function App() {
       <QuestionModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
-        onSent={(msg) => showToast(msg)}
+        onSent={(msg) => showToast(msg, 'success')}
+        onError={(err) => showToast(err, 'error')}
       />
 
       <Toast
         message={toast.message}
+        type={toast.type}
         visible={toast.visible}
         onClose={() => setToast((t) => ({ ...t, visible: false }))}
       />
