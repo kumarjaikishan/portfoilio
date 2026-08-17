@@ -28,12 +28,14 @@ export default function About() {
         {/* Left: photo + skills */}
         <div className="reveal lg:col-span-5">
           <div className="w-full flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-10">
-            <div className="w-36 h-36 sm:w-40 sm:h-40 rounded-full bg-gold-gradient p-1 overflow-hidden flex-shrink-0 shadow-lg shadow-gold/20">
-              <img
-                src="https://res.cloudinary.com/dusxlxlvm/image/upload/v1761292180/personal/Pi7_Passport_Photo-Picsart-AiImageEnhancer_mst1bl.webp"
-                alt="Jai Kishan Kumar - MERN Developer Profile Photo"
-                className="w-full h-full object-cover rounded-full"
-              />
+            <div className="w-36 h-36 sm:w-40 sm:h-40 rounded-full p-1 bg-gold-gradient shrink-0 shadow-xl shadow-gold/25 ring-4 ring-gold/20 flex items-center justify-center">
+              <div className="w-full h-full rounded-full overflow-hidden bg-surface relative flex items-center justify-center">
+                <img
+                  src="https://res.cloudinary.com/dusxlxlvm/image/upload/v1786987767/portfolio/kishan_professional_faffkj.webp"
+                  alt="Jai Kishan Kumar - MERN Developer Profile Photo"
+                  className="w-full h-full object-cover object-top scale-[1.45] translate-y-2"
+                />
+              </div>
             </div>
             <div className="w-full text-sm sm:text-base text-text/80 space-y-2 pt-2">
               <div className="flex items-start">

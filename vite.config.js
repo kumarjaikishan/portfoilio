@@ -11,4 +11,7 @@ export default defineConfig({
       deleteOriginFile: false,
     }),
   ],
+  server: {
+    allowedHosts: true, // or ['local.battlefiesta.in', '.battlefiesta.in']
+  },
 })

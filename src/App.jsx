@@ -21,9 +21,9 @@ export default function App() {
   const [toast, setToast] = useState({ visible: false, message: '', type: 'success' })
   const { theme, toggleTheme } = useTheme()
 
-  // hide the loader once everything has mounted, like the original ftco-loader
+  // hide the loader after initial intro animation
   useEffect(() => {
-    const timer = setTimeout(() => setLoaderHidden(true), 600)
+    const timer = setTimeout(() => setLoaderHidden(true), 1200)
     return () => clearTimeout(timer)
   }, [])
 
